@@ -1,19 +1,32 @@
 package atividade01;
 
-import java.util.Collection;
+import java.util.ArrayList;
 
-public class Ordenador implements IOrdenador {
-	
-	private Collection<String> colecao;
-	
-	public Ordenador() {
-		//sthis.colecao 
-	}
-	
+public class Ordenador implements IOrdenador {	
+	private ArrayList<String> colecao;
+		
 	@Override
-	public void inserirColecao(Collection<String> pColecao) {
-		// TODO Auto-generated method stub
-
+	public void inserirColecao(ArrayList<String> pColecao) {
+		int temp = 0;
+		int i = 0;
+		boolean next = false;
+		
+		while(next){
+			int numAtual = Integer.parseInt(pColecao.get(i));
+			
+			if(numAtual > temp){
+				
+			}
+			i++;
+		}
+		
+		for(String item : pColecao){
+			int numAtual = Integer.parseInt(item);
+			
+			if(numAtual > temp){
+				temp = numAtual;
+			}
+		}
 	}
 
 	@Override
@@ -44,5 +57,13 @@ public class Ordenador implements IOrdenador {
 	public Double getValorMediana() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public ArrayList<String> getColecao() {
+		return colecao;
+	}
+
+	public void setColecao(ArrayList<String> colecao) {
+		this.colecao = colecao;
 	}
 }
